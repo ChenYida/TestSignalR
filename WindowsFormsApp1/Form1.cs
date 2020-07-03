@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
 
             _connection = new HubConnectionBuilder()
-                .WithUrl("https://localhost:44316/")
+                .WithUrl("https://cyd.azurewebsites.net/")
                 .WithAutomaticReconnect()
                 .Build();
         }
@@ -33,7 +33,7 @@ namespace WindowsFormsApp1
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            _connection.InvokeAsync("Chat", "Winform Client Says Hello!");
+            _connection.InvokeAsync("Chat", textBox1.Text);
         }
 
         private void btnClear_Click(object sender, EventArgs e)
