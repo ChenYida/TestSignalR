@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
 
             _connection = new HubConnectionBuilder()
-                .WithUrl("https://cyd.azurewebsites.net/")
+                .WithUrl("https://localhost:44316/")
                 .WithAutomaticReconnect()
                 .Build();
         }
